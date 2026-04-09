@@ -1,0 +1,196 @@
+#########################################################################
+#                     General Control Parameter                         #
+#########################################################################
+// maxSimuStep: 最大模拟步数，不管是否重启计算。
+// intervalStepFlow: 输出流场变量文件 'flow.dat' 的步长间隔。
+// intervalStepPlot: 输出 Tecplot 可视化文件 'tecflow.dat' 的步长间隔。
+// intervalStepForce: 输出气动力系数文件 'aircoef.dat' 的步长间隔。
+// intervalStepRes: 输出残差文件 'res.dat' 的步长间隔。
+
+int maxSimuStep       = 10000;
+
+int intervalStepFlow  = 1000;
+int intervalStepPlot  = 1000;
+int intervalStepForce = 100;
+int intervalStepRes   = 10;
+
+// ifLowSpeedPrecon: 低速流的预处理，用于加速收敛。
+//                   0 -- 不进行预处理（默认，马赫数 > 0.3）
+//                   1 -- 进行预处理（马赫数 <= 0.3）
+int ifLowSpeedPrecon = 0;
+
+#########################################################################
+#                       Inflow Parameter                                #
+#########################################################################
+// refMachNumber: 马赫数。
+// attackd: 攻角。
+// angleSlide: 侧滑角。
+// inflowParaType: 来流参数类型。
+//                 0 -- 无量纲条件。
+//                 1 -- 飞行条件。
+//                 2 -- 实验条件。
+//                 3 -- 亚音速边界条件。
+// refReNumber: 雷诺数（基于单位长度），单位 1/m。
+// refDimensionalTemperature: 参考温度（有量纲），或实验条件下的总温。
+// refDimensionalPressure: 参考压力（有量纲），或实验条件下的总压。
+// height: 飞行高度，单位 km。
+// gridScaleFactor: 网格单位缩放因子，默认 1.0 表示米。常见单位：
+//                    1 dm = 0.1  m。
+//                    1 cm = 0.01 m。
+//                    1 mm = 0.001m。
+//                    1 inch             = 0.0254m。
+//                    1 foot = 12 inches = 0.3048m。
+//                    1 yard = 3  feet   = 0.9144m。
+// forceReferenceLength, forceReferenceLengthSpanWise, forceReferenceArea:
+//                    参考长度、展向长度和参考面积，与网格单位无关。
+// TorqueRefX, TorqueRefY, TorqueRefZ: 力矩参考点，与网格单位无关。
+
+double refMachNumber = 0.2;
+double attackd       = 2.79;
+double angleSlide    = 0.00;
+
+int inflowParaType = 0;
+double refReNumber = 6.5e6;
+double refDimensionalTemperature = 288.15;
+
+//int inflowParaType = 1;
+//double height = 0.001;
+
+double gridScaleFactor = 1.0;
+
+double forceReferenceLengthSpanWise = 1.0;    // 单位：米
+double forceReferenceLength = 1.0;            // 单位：米
+double forceReferenceArea = 1.0;              // 单位：平方米
+double TorqueRefX = 0.0;                      // 单位：米 
+double TorqueRefY = 0.0;                      // 单位：米
+double TorqueRefZ = 0.0;                      // 单位：米
+
+#########################################################################
+#                       Physical models                                 #
+#########################################################################
+// viscousType : 粘性模型类型。
+//           0 -- 欧拉方程。
+//           1 -- 层流。
+//           3 -- 一方程湍流模型。
+//           4 -- 两方程湍流模型。
+// viscousName: 层流或湍流模型名称。
+//              -- "1eq-sa"，当 viscousType = 3。
+//              -- "2eq-kw-menter-sst"，当 viscousType = 4。
+// DESType: DES 类型。
+//          0 -- RANS（默认）
+//          1 -- DES
+//          2 -- DDES
+//          3 -- IDDES
+
+//int    viscousType = 0;
+//string viscousName = "Euler";
+
+//int    viscousType = 1;
+//string viscousName = "laminar";
+
+int    viscousType = 3;
+string viscousName = "1eq-sa";
+
+//int    viscousType = 4;
+//string viscousName = "2eq-kw-menter-sst";
+
+int DESType = 0;
+
+int roeEntropyFixMethod = 3;
+double roeEntropyScale  = 1.0;
+#########################################################################
+#                       Spatial Discretisation                          #
+#########################################################################
+#*******************************************************************
+#                       Struct Solver                              *
+#*******************************************************************
+// str_limiter_name: 结构网格限制器。
+//                   -- "3rdsmooth", "smooth"。
+//                   -- "nolim"，不使用限制器。
+
+string str_limiter_name = "smooth";
+
+#*******************************************************************
+#                       UnStruct Solver                            *
+#*******************************************************************
+// uns_limiter_name: 非结构网格限制器。
+//                   -- "vencat"。
+//                   -- "1st"，表示一阶精度。
+//                   -- "nolim"，不使用限制器。
+// venkatCoeff: vencat 限制器系数（当 uns_limiter_name = 'vencat' 时使用）。
+//              值越小，越稳定。
+
+string uns_limiter_name = "vencat";
+double venkatCoeff      = 50.0;
+
+#########################################################################
+#                       Temporal Discretisation                         #
+#########################################################################
+// iunsteady: 稳态或非稳态。
+//            0 -- 稳态。
+//            1 -- 非稳态。
+// CFLEnd: CFL 数，[0.1, 100]。
+//         数值越大，收敛越快，但稳定性降低。
+// nLUSGSSweeps: LU-SGS 子迭代次数。
+//               1 -- 推荐用于结构网格。
+//             1-3 -- 推荐用于非结构网格。
+
+int iunsteady = 0;
+
+double CFLEnd = 100.0;
+
+int nLUSGSSweeps = 5;
+
+#########################################################################
+#                       Multi-Grid parameters                           #
+#########################################################################
+// nMGLevel: 多重网格层数。
+//           = 1 -- 单层。
+//           > 1 -- 多层。
+// flowInitStep: 流场初始化步数，建议 0 - 500。
+//               多重网格：在粗网格上计算的步数。
+//               单网格：使用一阶 vanleer 方法的初始化步数。
+
+int nMGLevel = 1;
+int flowInitStep = 100;
+
+#########################################################################
+#                       File In or Out                                  #
+#########################################################################
+// gridfile: 分区网格文件路径（相对路径）。
+//           相对于当前工作目录。
+// IMPORTANT WARNING: 文件编号需要忽略，
+//                     例如网格文件为 rae2822_hybrid2d__4_0.fts，
+//                     此处应写为 'rae2822_hybrid2d__4.fts'。
+// plotFieldType: 是否输出完整场到 Tecplot，0 / 1。
+
+string gridfile = "./grid/rae2822_hybrid2d__4.fts";
+int plotFieldType = 0;
+
+// ----------------- 高级参数，可忽略 ----------------
+// nVisualVariables: Tecplot 输出变量数量。
+// visualVariables:  输出变量类型如下：
+//                   -- 密度(0), u(1), v(2), w(3), 压力(4), 温度(5), 马赫数(6),
+//                   -- 层流粘度(7), 湍流粘度(8),
+//                   -- 涡量_x(9), 涡量_y(10), 涡量_z(11), 涡量大小(12),
+//                   -- 应变率(13), Q准则(14), Cp(15), 时间步(16), 体积(17),
+//                   -- 湍动能(18), 耗散率(19), SSTF1(20), SSTF2(21)。
+// Important Warning: visualVariables 数组大小必须等于 nVisualVariables！！！
+// 且变量必须按从小到大排序。
+
+int nVisualVariables = 8;
+int visualVariables[] = [0, 1, 2, 3, 4, 5, 6, 15];
+
+// limitVariables: 限制方式（仅在 limitVector=0 时有效）。
+//                 0 -- 仅限制压力和密度，取最小值。
+//                 1 -- 限制所有变量，取最小值。
+// limitVector:
+//              0 -- 所有变量使用同一个限制系数。
+//              1 -- 每个变量使用各自的限制系数。
+// reconmeth:
+//            0 -- 重构面值时，Q+、Q- 使用各自限制器。
+//            1 -- Q+、Q- 使用左右单元的最小限制器。
+
+int reconmeth = 1;
+int limitVariables = 0;
+int limitVector = 0;
