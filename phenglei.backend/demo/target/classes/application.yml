@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+phenglei:
+  cmake:
+    source-dir: E:/phenglei/PHengLEI
+    build-dir: E:/phenglei/PHengLEI/build
+    install-dir: E:/phenglei/PHengLEI/output
+    exe-path: E:/phenglei/PHengLEI/output/PHengLEIv3d0.exe
+
+  config:
+    key-file: E:/phenglei/PHengLEI/output/bin/key.hypara
+    cfd-file: E:/phenglei/PHengLEI/output/bin/cfd_para.hypara
+    boundary-file: E:/phenglei/PHengLEI/output/bin/boundary_condition.hypara
+    default-dir: E:/phenglei/PHengLEI/anew
+
+logging:
+  level:
+    com.phenglei: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n"
