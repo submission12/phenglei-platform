@@ -4,12 +4,10 @@ import com.phenglei.model.BoundaryUpdateRequest;
 import com.phenglei.model.CfdUpdateRequest;
 import com.phenglei.model.KeyUpdateRequest;
 import com.phenglei.service.HyparaConfigService;
+import com.phenglei.service.ConfigResetService;
+
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Map;
@@ -19,9 +17,12 @@ import java.util.Map;
 public class ConfigController {
 
     private final HyparaConfigService hyparaConfigService;
+    private final ConfigResetService resetService; // ⭐ 新增
 
-    public ConfigController(HyparaConfigService hyparaConfigService) {
+    public ConfigController(HyparaConfigService hyparaConfigService,
+                            ConfigResetService resetService) {
         this.hyparaConfigService = hyparaConfigService;
+        this.resetService = resetService;
     }
 
     @GetMapping("/key")
@@ -81,6 +82,20 @@ public class ConfigController {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage(), e);
+        }
+    }
+
+    // ✅ ⭐ 新增：恢复默认配置
+    @PostMapping("/reset")
+    public Map<String, Object> reset() {
+        try {
+            resetService.resetToDefault();
+            return Map.of(
+                    "ok", true,
+                    "msg", "已恢复默认配置"
+            );
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "恢复失败", e);
         }
     }
 }

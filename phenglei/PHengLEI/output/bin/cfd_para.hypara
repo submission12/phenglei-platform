@@ -320,11 +320,11 @@ double refLengthOfLowSpeed = 1.0;
 int directionMethod  = 0;
 double refMachNumber = 0.73;
 double attackd       = 2.79;
-double angleSlide    = 0.0;
+double angleSlide    = 0.00;
 int flowInitMethod = 0;
 
 int inflowParaType = 0;
-double refReNumber = 6500000.0;
+double refReNumber = 6.5e6;
 double refDimensionalTemperature = 288.15;
 double freestream_vibration_temperature = 300.00;
 

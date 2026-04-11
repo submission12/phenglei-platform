@@ -12,7 +12,7 @@ phenglei:
     key-file: E:/phenglei/PHengLEI/output/bin/key.hypara
     cfd-file: E:/phenglei/PHengLEI/output/bin/cfd_para.hypara
     boundary-file: E:/phenglei/PHengLEI/output/bin/boundary_condition.hypara
-
+    default-dir: E:/phenglei/PHengLEI/anew
 
 logging:
   level:

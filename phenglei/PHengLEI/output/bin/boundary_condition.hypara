@@ -45,18 +45,18 @@ string bcName = "Farfield1";
   int bcType = 4;
   int inflowParaType = 0; 
   double refMachNumber = 0.1;
-  double attackd = 0.0;
-  double angleSlide = 0.0;
-  double refReNumber = 200000.0;
-  double refDimensionalTemperature = 293.0;
+  double attackd = 0;
+  double angleSlide = 0;
+  double refReNumber = 2.0e5;
+  double refDimensionalTemperature = 293;
 }
 string bcName = "Farfield2";
 {
   int bcType = 4;
   int inflowParaType = 1; 
   double refMachNumber = 0.1;
-  double attackd = 0.0;
-  double angleSlide = 0.0;
+  double attackd = 0;
+  double angleSlide = 0;
   double height = 10.0;
 }
 string bcName = "Farfield3";
@@ -64,29 +64,29 @@ string bcName = "Farfield3";
   int bcType = 4;
   int inflowParaType = 4; 
   double refDimensionalVelocity = 1000.0;
-  double refDimensionalDensity = 1000.0;
-  double attackd = 0.0;
-  double angleSlide = 0.0;
-  double refDimensionalTemperature = 293.0;
+  double refDimensionalDensity = 1.0e3;
+  double attackd = 0;
+  double angleSlide = 0;
+  double refDimensionalTemperature = 293;
 }
 string bcName = "Farfield4";
 {
   int bcType = 4;
   int inflowParaType = 5; 
   double refDimensionalVelocity = 1000.0;
-  double refDimensionalPressure = 100000.0;
-  double attackd = 0.0;
-  double angleSlide = 0.0;
-  double refDimensionalTemperature = 293.0;
+  double refDimensionalPressure = 1.0e5;
+  double attackd = 0;
+  double angleSlide = 0;
+  double refDimensionalTemperature = 293;
 }
 string bcName = "Farfield5";
 {
   int bcType = 4;
   int inflowParaType = 6;
   double refMachNumber = 0.1;
-  double attackd       = 0.0;
-  double angleSlide    = 0.0;
-  double refDimensionalTemperature = 293.0;
+  double attackd       = 0.00;
+  double angleSlide    = 0.00;
+  double refDimensionalTemperature = 293;
   double refDimensionalPressure = 8886.06;
 }
 string bcName = "Farfield6";
@@ -97,17 +97,17 @@ string bcName = "Farfield6";
   double primU = 0.0;
   double primV = 0.543918;
   double primW = 0.0;
-  double primPressure = 8.7674356;
+  double primPressure = 8.76743560;
 }
 
 string bcName = "Farfield7";
 {
   int bcType = 4;
   int inflowParaType = 8;
-  double refDimensionalVelocity = 15.0;
-  double refDimensionalHeight = 10.0;
+  double refDimensionalVelocity = 15;
+  double refDimensionalHeight = 10;
   double powerLawCoefficient = 0.25;
-  double refDimensionalPressure = 101325.0;
+  double refDimensionalPressure = 101325;
   double refDimensionalTemperature = 271.97;
 }
 
@@ -117,18 +117,18 @@ string bcName = "Inflow1";
   int bcType = 5;
   int inflowParaType = 0; 
   double refMachNumber = 0.1;
-  double attackd = 0.0;
-  double angleSlide = 0.0;
-  double refReNumber = 200000.0;
-  double refDimensionalTemperature = 293.0;
+  double attackd = 0;
+  double angleSlide = 0;
+  double refReNumber = 2.0e5;
+  double refDimensionalTemperature = 293;
 }
 string bcName = "Inflow2";
 {
   int bcType = 5;
   int inflowParaType = 1; 
   double refMachNumber = 0.1;
-  double attackd = 0.0;
-  double angleSlide = 0.0;
+  double attackd = 0;
+  double angleSlide = 0;
   double height = 0.001
 }
 string bcName = "Inflow3";
@@ -136,29 +136,29 @@ string bcName = "Inflow3";
   int bcType = 5;
   int inflowParaType = 4; 
   double refDimensionalVelocity = 1000.0;
-  double refDimensionalDensity = 1000.0;
-  double attackd = 0.0;
-  double angleSlide = 0.0;
-  double refDimensionalTemperature = 293.0;
+  double refDimensionalDensity = 1.0e3;
+  double attackd = 0;
+  double angleSlide = 0;
+  double refDimensionalTemperature = 293;
 }
 string bcName = "Inflow4";
 {
   int bcType = 5;
   int inflowParaType = 5; 
   double refDimensionalVelocity = 1000.0;
-  double refDimensionalPressure = 100000.0;
-  double attackd = 0.0;
-  double angleSlide = 0.0;
-  double refDimensionalTemperature = 293.0;
+  double refDimensionalPressure = 1.0e5;
+  double attackd = 0;
+  double angleSlide = 0;
+  double refDimensionalTemperature = 293;
 }
 string bcName = "Inflow5";
 {
   int bcType = 5;
   int inflowParaType = 6;
   double refMachNumber = 0.1;
-  double attackd       = 0.0;
-  double angleSlide    = 0.0;
-  double refDimensionalTemperature = 293.0;
+  double attackd       = 0.00;
+  double angleSlide    = 0.00;
+  double refDimensionalTemperature = 293;
   double refDimensionalPressure = 8886.06;
 }
 string bcName = "Inflow6";
@@ -169,7 +169,7 @@ string bcName = "Inflow6";
   double primU = 0.0;
   double primV = 0.543918;
   double primW = 0.0;
-  double primPressure = 8.7674356;
+  double primPressure = 8.76743560;
 }
 string bcName = "Inflow10";
 {
@@ -185,10 +185,10 @@ string bcName = "Inflow11";
 {
   int bcType = 5;
   int inflowParaType = 8;
-  double refDimensionalVelocity = 15.0;
-  double refDimensionalHeight = 10.0;
+  double refDimensionalVelocity = 15;
+  double refDimensionalHeight = 10;
   double powerLawCoefficient = 0.25;
-  double refDimensionalPressure = 101325.0;
+  double refDimensionalPressure = 101325;
   double refDimensionalTemperature = 271.97;
 }
 # If the boundary condition type is PRESSURE_INLET, then the parameters should be set as follows:
@@ -197,7 +197,7 @@ string bcName = "PressureInlet";
   int bcType = 52;
   double totalPressure = 118309.784;
   double totalTemperature = 302.4;
-  double direction_inlet[] = [1, 0, 0];
+  double direction_inlet[] = 1, 0, 0;
 }
 # If the boundary condition type is PRESSURE_OUTLET, then the parameters should be set as follows:
 string bcName = "PressureOutlet";
@@ -217,7 +217,7 @@ string bcName = "MassFlowInlet";
 string bcName = "MassFlowOutlet";
 {
   int bcType = 63;
-  double massFlow = 0.5;
+  double massFlow = 0.500;
 }
 # 'bcType' is defined as following:
 #     -2 : WAKE
