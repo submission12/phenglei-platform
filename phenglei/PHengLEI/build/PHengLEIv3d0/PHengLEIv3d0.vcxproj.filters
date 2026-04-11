@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\phenglei\Main\src\main.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\CFDSimulation.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\Simulation.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\GridFactory.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\FieldViewIn.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\GridPartition.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\GridView.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\FluentIn.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\Gmesh.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Main\src\GridgenIn.cpp">
+      <Filter>Main\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\phenglei\Main\include\CFDSimulation.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\Simulation.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\GridFactory.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\FieldViewIn.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\GridPartition.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\GridView.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\FluentIn.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\Gmesh.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\GridgenIn.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Main\include\SolversList.h">
+      <Filter>Main\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\phenglei\Main\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{8F8C11B0-A086-3844-A318-628E4D3526DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\include">
+      <UniqueIdentifier>{A5292E37-EE73-3456-AF45-670B9A36ADCF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\src">
+      <UniqueIdentifier>{3EA17137-439E-3CF5-B3DC-E8E70176C2AD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

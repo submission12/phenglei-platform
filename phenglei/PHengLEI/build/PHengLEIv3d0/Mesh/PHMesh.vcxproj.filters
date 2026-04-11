@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\phenglei\Mesh\src\UnstructuredOversetConfig.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\OversetKDTree.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\DynamicGrid.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_Deformation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_DeformationRBF.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_DeformationSPRING.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\ComputationalGrid.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\InterfaceLinkStructure.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_CellTopo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_FaceTopo.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_Refine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_Refine_Struct.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_Refine_Unstruct.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_RefineController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\phenglei\Mesh\src\Mesh_ConstructInterfaceLink.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\phenglei\Mesh\include\UnstructuredOversetConfig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\OversetKDTree.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\DynamicGrid.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_Deformation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_DeformationRBF.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_DeformationSPRING.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\ComputationalGrid.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\InterfaceLinkStructure.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_CellTopo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_FaceTopo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_Refine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_Refine_Struct.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_Refine_Unstruct.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_RefineController.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\phenglei\Mesh\include\Mesh_ConstructInterfaceLink.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\phenglei\Mesh\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{06B77E8A-C0BA-3728-93F9-A018C4D2271C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{02255DE6-B6F8-389D-8CFE-59A569F337E8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
